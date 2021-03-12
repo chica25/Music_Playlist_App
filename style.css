@@ -1,0 +1,61 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    min-height: 100%;
+    color: pink;
+    font-size: 1.4rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+.player {
+    background: tomato;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.img {
+    width: 50%;
+}
+
+#controls {
+    border: 1px lightslategray solid;
+    border-radius: 1rem;
+    padding: 1.6rem;
+}
+
+.controls_wrapper > span {
+    cursor: pointer;
+    color: lightslategray;
+    font-size: 6rem;
+    padding: 2rem;
+}
+
+#current-song {
+    overflow: hidden;
+}
+
+#playlis {
+    overflow: hidden;
+    text-align: left;
+}
+
+li {
+    cursor: pointer;
+    padding: 1.5rem;
+}
+
+li:hover {
+    background: #f3644b;
+}
+
+@media(min-width: 800px) {
+    body {
+        max-width: 60vw;
+        font-size:;
+    }
+}
