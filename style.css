@@ -13,7 +13,7 @@ body {
 
 
 .player {
-    background: tomato;
+    background: black;
     padding: 2rem;
     border-radius: 2rem;
 }
@@ -21,25 +21,25 @@ body {
 .img {
     width: 50%;
 }
-
+/* 
 #controls {
     border: 1px lightslategray solid;
     border-radius: 1rem;
     padding: 1.6rem;
-}
+} */
 
-.controls_wrapper > span {
+.control-wrapper > span {
     cursor: pointer;
-    color: lightslategray;
-    font-size: 6rem;
-    padding: 2rem;
+    /* color: lightslategray; */
+    font-size: 3rem;
+    padding: 0.5rem;
 }
 
 #current-song {
     overflow: hidden;
 }
 
-#playlis {
+#playlist {
     overflow: hidden;
     text-align: left;
 }
@@ -50,7 +50,11 @@ li {
 }
 
 li:hover {
-    background: #f3644b;
+    background: white;
+}
+
+a {
+    color: whitesmoke;
 }
 
 @media(min-width: 800px) {
