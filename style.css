@@ -13,6 +13,13 @@ body {
     text-align: center;
 }
 
+h2 {
+    color: white;
+    font-size: 4rem;
+    font-family: helvetica;
+    text-align: center;
+    /* line-height: 100vh; */
+}
 
 .player {
     /* background: rgb(117, 87, 187); */

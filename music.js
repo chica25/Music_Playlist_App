@@ -1,3 +1,6 @@
+
+
+
 const songs = ["jungle.wav", "morning.wav", "together.wav", "young_souls.wav", "cha_cha_groove.wav"]
 
 const player = document.getElementById('player')
