@@ -11,11 +11,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     </head>
     <body>
+        <h1 class="title">Music Playlist</h1>
         <div class="player">
             <img src="images/headphones.png" id="headphones" alt="headphones">
             <audio id="player" ontimeupdate="updateProgress()">
-                <source id="source" src="songs/young_souls.wav" />
-                Audio not supported
+                <source id="source" />
             </audio>
 
             <progress id="progress" value="0" max="100"></progress>
@@ -28,14 +28,12 @@
                 </div>
                 <p>Volume:</p>
                 <div class="volume"></div>
-                <span>-</span>
                 <input type="range" id="volume-slider" min="0" max="1" step="0.01">
-                <span>+</span>
             </div>   
 
-            <h2>My songs:</h2>
+            <h1>Playlist</h1>
             <div id="playlist"></div>
-            <p>Music: <a href="https://www.bensound.com/royalty-free-music/track/jazzy-frenchy">https://www.bensound.com</p>
+            <p>Music: <a href="https://uppbeat.io/">https://uppbeat.io/</p>
         </div>
 
         <script src="music.js"></script>

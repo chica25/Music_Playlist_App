@@ -1,4 +1,4 @@
-const songs = ["jungle.wav", "morning.wav", "together.wav", "young_souls.wav" ]
+const songs = ["jungle.wav", "morning.wav", "together.wav", "young_souls.wav", "cha_cha_groove.wav"]
 
 const player = document.getElementById('player')
 
@@ -21,16 +21,18 @@ for(const link of links) {
     link.addEventListener('click', setSong)
 }
 
-songList.onClick = function(e) {
+function setSong(e) {
+   document.querySelector('#headphones').classList.remove('pulse')
+   
    const source = document.getElementById('source')
    source.src = "songs/"+e.target.innerText;
 
-   document.querySelector('#current-song').innerText = `Now Playing: ${e.target.innerText}`
+   document.getElementById('current-song').innerText = `Now Playing: ${e.target.innerText}`
 
     player.load()
     player.play()
     // image
-    document.querySelector('#headphones').classList.add("pulse")
+    document.querySelector('#headphones').classList.add('pulse')
 };
 
 function playAudio() {
