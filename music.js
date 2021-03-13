@@ -1,5 +1,6 @@
-const songs = ["morning.wav", "together.wav", "Young Folks.wav", "jungle.wav"]
+const songs = ["jungle.wav", "morning.wav", "together.wav", "young_souls.wav" ]
 
+const player = document.getElementById('player')
 
 function newSongList() {
     const list = document.createElement('ol')
@@ -14,13 +15,43 @@ function newSongList() {
 const songList = document.getElementById('playlist')
 songList.appendChild(newSongList());
 
+
+const links = document.querySelectorAll('li')
+for(const link of links) {
+    link.addEventListener('click', setSong)
+}
+
 songList.onClick = function(e) {
    const source = document.getElementById('source')
    source.src = "songs/"+e.target.innerText;
 
-   document.querySelector('#current-song').innerText = "" `Now Playing: ${e.target.innerText}`
+   document.querySelector('#current-song').innerText = `Now Playing: ${e.target.innerText}`
 
-   const player = document.getElementById('player')
     player.load()
     player.play()
+    // image
+    document.querySelector('#headphones').classList.add("pulse")
 };
+
+function playAudio() {
+    if(player.readyState){
+        player.play()
+    }
+}
+
+function pauseAudio(){
+    player.pause()
+}
+
+const slider = document.getElementById('volume-slider')
+slider.oninput = function(e) {
+    const volume = e.target.value
+    player.volume = volume
+}
+
+function updateProgress() {
+    if(player.currentTime > 0) {
+        const progressBar = document.getElementById('progress')
+        progressBar.value = (player.currentTime / player.duration) * 100
+    }
+}

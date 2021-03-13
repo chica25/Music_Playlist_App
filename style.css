@@ -1,5 +1,6 @@
 html {
     font-size: 10px;
+    font-family: 'Comfortaa', cursive;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
     border-radius: 2rem;
 }
 
-.img {
+img {
     width: 50%;
 }
 /* 
@@ -37,6 +38,7 @@ body {
 
 #current-song {
     overflow: hidden;
+      text-align: center;
 }
 
 #playlist {
@@ -50,16 +52,39 @@ li {
 }
 
 li:hover {
-    background: white;
+    color: white;
 }
 
 a {
-    color: whitesmoke;
+    color: linear-gradient(255,0,0,0);
+}
+
+progress {
+    width: 50%;
+    height: 2rem;
+    margin-bottom: 1rem;
 }
 
 @media(min-width: 800px) {
     body {
         max-width: 60vw;
-        font-size:;
+        font-size: 14px;
     }
+.pulse {
+    animation: pulse;
+    animation-duration: 0.4s;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9)
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 }
