@@ -1,7 +1,7 @@
 
 
 
-const songs = ["jungle.wav", "morning.wav", "together.wav", "young_souls.wav", "cha_cha_groove.wav"]
+const songs = ["All Good Folks - jungle.wav", "All Good Folks - morning.wav", "All Good Folks - together.wav", "Soundroll - young_souls.wav", "All Good Folks - morning.wav", "All Good Folks - cha_cha_groove.wav"]
 
 const player = document.getElementById('player')
 

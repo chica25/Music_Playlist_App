@@ -11,13 +11,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1 class="title">Music Playlist</h1>
-        <br>
-        <h2 class="text-effect">Turn up the volume</h2>
+       
+
+        <h1 class="text-effect">Turn up the volume</h1>
         <div class="player">
-            <img src="images/headphones.png" id="headphones" alt="headphones">
+            <h1 class="title">Music Playlist</h1>
+            <img src="images/headphones_2.jpg" id="headphones" alt="headphones">
             <audio id="player" ontimeupdate="updateProgress()">
                 <source id="source" />
+                Audio not supported
             </audio>
 
             <progress id="progress" value="0" max="100"></progress>
@@ -30,14 +32,16 @@
                 </div>
                 <p>Volume:</p>
                 <div class="volume"></div>
+                <!-- <span>-</span>
+                <span>+</span> -->
                 <input type="range" id="volume-slider" min="0" max="1" step="0.01">
             </div>   
 
-            <h1>Playlist</h1>
+            <h1 class="playlist-title">Playlist</h1>
             <div id="playlist"></div>
-            <p>Music: <a href="https://uppbeat.io/">https://uppbeat.io/</p>
         </div>
 
         <script src="music.js"></script>
+        <script src="textAnimation.js"></script>
     </body>
 </html>
